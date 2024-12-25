@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>semantic</title>
+    <style>
+      .header {
+        border-color: rgb(57, 231, 57);
+        border-style: inset;
+        height: 60px;
+        width: 1000px;
+      }
+
+      .nav {
+        border-color: blue;
+        border-style: inset;
+        height: 30px;
+        width: 1000px;
+      }
+      .section {
+        border-color: blueviolet;
+        border-style: inset;
+        width: 600px;
+        height: 600px;
+      }
+      .article {
+        border-color: aqua;
+        border-style: inset;
+        width: 500px;
+        height: 500px;
+        margin: 25px;
+      }
+      .div {
+        display: flex;
+        flex-direction: row;
+      }
+      .aside {
+        border-color: yellow;
+        border-style: inset;
+        width: 400px;
+        height: 600px;
+      }
+      .footer {
+        border-color: red;
+        border-style: inset;
+        width: 1000px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">header</header>
+    <nav class="nav">nav</nav>
+    <div class="div">
+      <section class="section">
+        section
+        <article class="article">article</article>
+      </section>
+      <aside class="aside">aside</aside>
+    </div>
+    <footer class="footer">footer</footer>
+  </body>
+</html>

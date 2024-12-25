@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container #hello {
+        border: 3px, solid, red;
+      }
+      .container .child1 .child2 {
+        color: blue;
+      }
+      .container:hover p {
+        font-size: 30px;
+      }
+      .container:hover #hello {
+        display: flex;
+      }
+      #hello {
+        display: none;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <p id="hello">Hello</p>
+      <p class="hi">Hi</p>
+      <p>Bye</p>
+      <a href="">Anchor</a>
+      <div class="child1"><p class="child2">Child of div</p></div>
+    </div>
+  </body>
+</html>
