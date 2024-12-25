@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+       .hero_image {
+         height: 100vh;
+         width: 100vw;
+         background-image: url(https://s3-alpha-sig.figma.com/img/87ce/f5d5/d40a9f22a64d6937ad2f7df5b04e3d85?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mhDacvOH3Y32djkyAULdXbZ3Lq90qCnpt7VD-~8wjuLPXTaUD8ZTQEX-C~oaAZEZngNGNBQCnizI8I9irerTmN-P-GdXW84zlXDsuDsnAAPWC1aLXZfUIbarfz3G2qbdk~xwW80wb75of0Xy3zxJhOj6QF9S9SE0H5-qSGKrlfF-Y5WzgLkD4q9cOc50-YmXlJFbfFSt9rrm0cDw2sqls~UwKW9rjamhV86TIl7IaRZ0do-I~jSnMylpG9r8VHFf2QJAnVUe5lX0gHMfGyM-Ay-snvX7pdz5SFD5eMIzpQTq5rW8c1ZbutLv0d~2ZpMibeuHUmJV~92FJa34lplcNg__);
+         background-size: cover;
+         display: flex;
+         flex-direction: column;
+         position: relative;
+       }
+       .blurred{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 324px;
+        background-image: linear-gradient(180deg, rgba(216, 228, 233, 0.00) 0%, #D8E4E9 100%);
+       }
+       .navbar {
+         position: fixed;
+         height: 43.5px;
+         width: 1204px;
+         padding: 30px 120px 0px 116px;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+       }
+       .action_container {
+         height: 21px;
+         width: 392px;
+         padding: 11px 404px 11.5px 408px;
+         display: flex;
+         flex-direction: row;
+         gap: 24px;
+       }
+       .ac {
+         height: 21px;
+         width: 100px;
+       }
+       .gurvannavbar {
+         text-decoration: none;
+         color: #fff;
+         font-size: 18px;
+       }
+       .language {
+         height: 14px;
+         width: 14px;
+         padding: 13px;
+         border-radius: 24px;
+         border-style: unset;
+         background-color: white;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+       }
+       .textcontainer {
+         height: 594px;
+         width: 618px;
+         margin-top: 169px;
+         margin-right: 411px;
+         margin-bottom: 10px;
+         margin-left: 411px;
+         display: inline-flex;
+         flex-direction: column;
+         align-items: center;
+       }
+       .textcontainer {
+        text-align: center;
+       }
+       .puremagic {
+         color: rgba(232, 237, 242, 0.72);
+         font-size: 80px;
+         font-weight: 400;
+         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+           sans-serif;
+       }
+       .awaits {
+         color: rgba(253, 253, 254, 0.98);
+         font-size: 250px;
+         font-weight: 400;
+         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+           sans-serif;
+       }
+       .on {
+         color: rgba(255, 255, 255, 0.8);
+         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+           sans-serif;
+         font-weight: 900;
+         font-size: 64px;
+       }
+       .location_container {
+         height: 370px;
+         width: 1202px;
+         padding: 65px 119px 65px 119px;
+         background-color: #9db8da33
+       }
+       .cards {
+         height: 370px;
+         width: 275px;
+         border-radius: 40px;
+         border-style: inset;
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: #FDFDFE;
+         font-size: 37px;
+         font-weight: 400;
+         font-family: "Bebas Neue";
+         font-style: normal;
+         line-height: normal;
+         text-transform: uppercase;
+        text-align: center;
+        text-shadow: 0px 4px 4.9px rgba(0, 0, 0, 0.65);
+      }
+       .footer_style {
+         height: 1120px;
+         width: 1440px;
+         background-image: url(https://s3-alpha-sig.figma.com/img/bfc8/2fd9/8ba90e92a1a6c0d5ac559a55f9413e51?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YD9ZVDnrfXAsPElWXBt5j-Y9wg2VObItYENgTX6mWWBXAnF6pip9MPibEHjgnDnJErS2c2l-7xsMt2re5GBOORwBaqWCv6W-wD3gfP-rInMIeSmss9TXpic8NqYfrKTBdkFrKBegSWFOySF~IhJYoaMU0EezcCgNMR6R~pi-IJc8Y-lRy~1~dB07vAvo98M9ExiG0ZMejBkoj1osvIR7TgHuW0OR-GZ2JDqousB4wEndaLSJodkG-5KHT29sJ5MsbigDHYNW~tbC4nMhBHu66L8gmQPcKh9KVQ1YQq98M6OUwhDTY~hmu5RQz3C5DgiGZpiCOwUpTEdK5zW-Ps00~g__);
+
+       }
+       .title_container {
+         height: 84px;
+         width: 1440px;
+         margin-top: 40px;
+         text-align: center;
+       }
+       .card_container {
+         width: 1200px;
+         height: 527px;
+         margin-top: 80px;
+         margin-right: 120px;
+         margin-bottom: 246px;
+         margin-left: 120px;
+         display: flex;
+         flex-direction: row;
+         gap: 24px;
+       }
+       .package_card {
+         height: 527px;
+         width: 384px;
+         border-radius: 40px;
+         background-color: white;
+       }
+       .package_card_header {
+         height: 36px;
+         width: 336px;
+         padding: 24px;
+         padding-top: 32px;
+         display: flex;
+         flex-direction: row;
+         gap: 16px;
+       }
+       .package_card_header_text {
+         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+           sans-serif;
+         font-size: 18px;
+         font-style: normal;
+         font-weight: 600;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+       }
+       .package_card_content {
+         height: 375px;
+         width: 336px;
+         padding: 24px;
+         padding-top: 12px;
+         padding-bottom: 48px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         gap: 32px;
+       }
+       .package_card_content_detail {
+         height: 287px;
+         width: 336px;
+         display: flex;
+         flex-direction: column;
+         gap: 32px;
+       }
+       .package_card_content_button {
+         background-color: #a4d1e2;
+         border-radius: 99px;
+         border-style: unset;
+         text-align: center;
+         height: 48px;
+         width: 336px;
+         font-family: "Bebas Neue";
+       }
+       .package_card_content_detail_price_section {
+         height: 78px;
+         width: 336px;
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+       }
+       .package_card_content_detail_container {
+         height: 117px;
+         width: 336px;
+         display: flex;
+         flex-direction: column;
+         gap: 16px;
+       }
+       .package_card_content_detail_price_section_price {
+         color: #303030;
+         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+           sans-serif;
+         font-size: 40px;
+         font-style: normal;
+         font-weight: 600;
+       }
+       .package_card_content_detail_price_section_subtitle {
+         color: #919191;
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 500;
+         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+           sans-serif;
+       }
+       .package_card_content_detail_container_headercontainer {
+         height: 21px;
+         width: 256px;
+         padding-left: 40px;
+         padding-right: 40px;
+       }
+       .package_card_content_detail_container_headercontainer_text {
+         color: #121316;
+         font-size: 18px;
+         font-style: normal;
+         font-weight: 500;
+         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+           sans-serif;
+       }
+       .item_container {
+         height: 20px;
+         width: 336px;
+         display: flex;
+         flex-direction: row;
+         gap: 20px;
+       }
+       .check {
+         height: 20px;
+         width: 20px;
+       }
+       .item_container_text {
+         font-size: 14px;
+         font-style: normal;
+         font-weight: 500;
+         color: #3f4145;
+         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+           sans-serif;
+       }
+       .Pricing_of_Our_Agency {
+         color: #000;
+         text-align: center;
+         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+           sans-serif;
+         font-size: 42px;
+         font-weight: 600;
+       }
+       .choose {
+         display: block;
+         color: rgba(24, 24, 27, 0.70);
+           text-align: center;
+           font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+           font-size: 20px;
+           font-weight: 500;
+           text-transform: capitalize;
+       }
+       .roadmap {
+         height: 1022px;
+         width: 1440ppx;
+         background-image: url(https://s3-alpha-sig.figma.com/img/0a01/4441/f3b23c9e936f611b9b24ad9f5db5c0df?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DpLONw96c4qyLFdePcPgfo1mJWKdfA7xicWaKS3Bsgqp-pH8e17McF6WIUiZ3ePDdHEBSkHcJ4HlClTRg~QTkw3D1pfHHACWIN1RLKay6xy4s~PJq3UQ-SebhkvnHxVv~5HY8XIzd4jOZo4G7VF0~rjex0Md0~I5pM5H9yJ2W3aiyZ9wG6ZFOcH1NnVsJ4DeIYKXGPHzsthj9zVmNGSQq2lSTUliJ648H5XH6pfFXf3KikoS-goET1NtQY2rFIaUKtu65Nj9Cxz5EF4fFy7e6-pki3eAGP0avjUWuv24nHC0bjxIkZX4jgh5xykrnvF5k5fcn3-w1L27rWhTcSxLGA__);
+          background-size: 100%;
+          padding-top: 120px;
+          padding-left: 120px;
+       }
+       .framezuunduruv {
+         width: 1442px;
+         height: 84px;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+       }
+       .destination {
+         color: #000;
+         text-align: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 42px;
+        font-weight: 600;
+        }
+        .pack {color: rgba(24, 24, 27, 0.70);
+          text-align: center;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-size: 20px;
+          font-weight: 500;
+          text-transform: capitalize;
+      }
+      .framezuundalangurav {
+          width: 1200px;
+          height: 640px;
+          margin-top: 264px;
+          margin-right: 120px;
+          margin-left: 120px;
+          margin-bottom: -2px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+      .leftc {
+          width: 513px;
+          height: 640px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+      }
+      .days {
+          width: 483px;
+          height: 52px;
+          padding: 30px 30px 30px 0px;
+          border-radius: 120px;
+          display: flex;
+          align-items: center;
+      }
+      .minicontainer {
+          width: 453px;
+          height: 47px;
+          padding-left: 30px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex: 1 0 0;
+          position: absolute;
+      }
+      .location_info {
+          width: 212px;
+          height: 47px;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+      }
+      .day_container {
+          width: 52px;
+          height: 47px;
+      }
+      .day_huree {
+          width: 52px;
+          height: 52px;
+          border-radius: 100%;
+          background-color: #F7F6F3;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .day_text{
+          color: #000;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+      }
+      .location_name {
+          color: var(--text-text-foreground, #09090B);
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-size: 24px;
+          font-weight: 500;
+      }
+      .location_detail {
+          width: 94px;
+          height: 15px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+      }
+      .icon_container {
+          width: 14px;
+          height: 14px;
+      }
+      .location_region {
+          color: var(--text-text-accent-foreground, #18181B);
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+          ;font-size: 12px;
+          font-weight: 400;
+      }
+      .rightc {
+          width: 647px;
+          height: 640px;
+          border-radius: 30px;
+          flex-shrink: 0;
+          align-self: stretch;
+          position: relative;
+      }
+      .mappin {
+          width: 34px;
+          height: 34px;
+          color: #6972b5;
+      }
+      .days:hover {border: 3px, solid, white;}
+      .pinstyle {width: 34px;
+            height: 34px;
+            position: relative;
+          }
+      #duguineg {
+        height: 245px;
+        width: 245px;
+        position: relative;
+        top: 424%;
+        left: 194%;
+        display: none;
+      }
+      .days:hover #duguineg {display: flex;}
+      #duguihoyr {
+        height: 245px;
+        width: 245px;
+        position: relative;
+        top: -80%;
+        left: 155%;
+        display: none;
+      }
+      .days:hover #duguihoyr {display: flex;}
+      #duguigurav {
+        height: 245px;
+        width: 245px;
+        position: relative;
+        top: 30%;
+        left: 120%;
+        display: none;
+      }
+      .days:hover #duguigurav {display: flex;}
+      #duguiduruv {
+        height: 245px;
+        width: 245px;
+        position: relative;
+        top: -690%;
+        left: 115%;
+        display: none;
+      }
+      .days:hover #duguiduruv {display: flex;}
+      #duguitav {
+        height: 245px;
+        width: 245px;
+        position: relative;
+        top: -950%;
+        left: 153%;
+        display: none;
+      }
+      .days:hover #duguitav {display: flex;}
+
+        .cards:hover{
+        box-shadow: -8px -8px 0px 0px rgba(31, 114, 170, 0.46), 8px 8px 0px 0px rgba(41, 114, 139, 0.25);
+        filter: brightness(70%);
+        }
+        .package_card:hover {
+          box-shadow: -8px -8px 0px 0px rgba(31, 114, 170, 0.46), 8px 8px 0px 0px rgba(41, 114, 139, 0.25);
+        }
+        .package_card:hover .package_card_content_button {
+          color: white;
+          background-color: black;
+        }
+        .foot {
+          width: 1200;
+          height: 44px;
+          padding: 80px 120px 80ox 120px;
+          padding-left: 120px;
+        }
+        .footheader {
+          width: 1200px;
+          height: 44px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .socialmedia {
+          width: 358px;
+          height: 44px;
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+        }
+        .fb {
+          width: 127px;
+          height: 24px;
+          padding: 10px 20px 10px 20px;
+          border-radius: 9999px;
+          display: flex;
+          min-height: 44px;
+          padding: 10px 20px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          background-color: white;
+        }
+        .blurroad {
+          width: 1440px;
+          height: 204px;
+          flex-shrink: 0;
+          background: linear-gradient(0deg, rgba(216, 228, 233, 0.00) 0%, rgba(216, 228, 233, 0.90) 100%);
+        }
+    </style>
+    <title>headerhiitsgeey</title>
+  </head>
+  <body>
+    <!-- Hero image -->
+    <section class="hero_image">
+      <div class="blurred"></div>
+      <!-- navigation bar -->
+      <nav class="navbar">
+        <img
+          height="35"
+          width="101"
+          src="https://s3-alpha-sig.figma.com/img/86c0/cdfe/0a75f7a2c1c595781b7f4589e61e3895?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TMlR1dsj4kz1Rugmm03kpJrxR8MJgPWkqTfUuDMv9hwb9zh3TyHHReUl5gcnxK6HJhXHxNqvGQcgAJ2IjxjTfuKdyIu5~sxeGt~crbmLRaAEpHZoB45WzDRBdLiJkWsd~oQJUphLl2CROOleoaEBx4FsnitXN4WM7zqsrHS-5VT63Tc~l3D0qIBXX03f1DXAI2CC8DCTXvygM9YI--XtgXd2JtW8BaeIFfZjnPG81Iy~PtU33Vtvuq~6Pb7nLfC4pfrLO~Hf9h9Zwswm47-Gau1ja9zeVCAxM2Zfy3azWWCJICIqijh21MlqE3TUO6Q7bn4T8-Ov6B9YwJQELSM-EA__"
+          alt="error"
+        />
+        <!-- Action container div-->
+        <div class="action_container">
+          <div class="ac">
+            <a
+              class="gurvannavbar"
+              href="https://huree.mn/%D1%88%D2%AF%D0%BB%D1%8D%D0%B3-shuleg/"
+              target="_blank"
+              >Home</a
+            >
+          </div>
+          <div class="ac">
+            <a
+              class="gurvannavbar"
+              href="https://huree.mn/%D1%88%D2%AF%D0%BB%D1%8D%D0%B3-shuleg/"
+              target="_blank"
+              >About</a
+            >
+          </div>
+          <div class="ac">
+            <a
+              class="gurvannavbar"
+              href="https://huree.mn/%D1%88%D2%AF%D0%BB%D1%8D%D0%B3-shuleg/"
+              target="_blank"
+              >Contact</a
+            >
+          </div>
+          <!-- user image -->
+          <img
+            style="margin-left: 24px"
+            src="user.png"
+            alt="error"
+            width="20"
+            height="20"
+          />
+        </div>
+        <!-- language div -->
+        <div class="language">EN</div>
+      </nav>
+
+      <!-- text container div -->
+      <div class="textcontainer">
+        <span class="puremagic">PURE MAGIC</span>
+        <span class="awaits">AWAITS</span>
+        <span class="on">2024</span>
+      </div>
+      <!-- hero_image tugsgul -->
+    </section>
+    <!-- ================================================================================= -->
+    <!-- location container -->
+    <section class="location_container">
+      <!-- card container -->
+      <article style="display: flex; flex-direction: row; gap: 40px">
+        <!-- terhiin tsagaan lake -->
+        <div
+          class="cards"
+          style="
+            background-image: url(https://s3-alpha-sig.figma.com/img/87ce/f5d5/d40a9f22a64d6937ad2f7df5b04e3d85?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mhDacvOH3Y32djkyAULdXbZ3Lq90qCnpt7VD-~8wjuLPXTaUD8ZTQEX-C~oaAZEZngNGNBQCnizI8I9irerTmN-P-GdXW84zlXDsuDsnAAPWC1aLXZfUIbarfz3G2qbdk~xwW80wb75of0Xy3zxJhOj6QF9S9SE0H5-qSGKrlfF-Y5WzgLkD4q9cOc50-YmXlJFbfFSt9rrm0cDw2sqls~UwKW9rjamhV86TIl7IaRZ0do-I~jSnMylpG9r8VHFf2QJAnVUe5lX0gHMfGyM-Ay-snvX7pdz5SFD5eMIzpQTq5rW8c1ZbutLv0d~2ZpMibeuHUmJV~92FJa34lplcNg__);
+            background-size: cover;
+          "
+        >
+          TERKHIIN TSAGAAN LAKE
+        </div>
+        <!-- amarbayasgalan monastery -->
+        <div
+          class="cards"
+          style="
+            background-image: url(https://s3-alpha-sig.figma.com/img/e124/d31b/4b7edc8a8926233d613c437affc8b621?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MbGHAeVdqhTDoheuoIiHsCW7AE2Yk7exvdlYibx~SsTkaiOejXhRPEuxyANJfqcs0NCFpnuJ~psi5OI7Ce3~erIlzNkQEYBC-4-M0vA0fvfZ~Pf4PcbTnKWLqd9BmHWGz9R8pFOdQkO1oDREtSDs0nnVpu0XdQZfREgv8JqyVQFUatcXMpocL6Dp0WBGaS8shyMMO3qklmm-s-yxOoNuGzOEgLkZe7~fpNzuqU6r755UOShzsHYf0WhUf2Y6EnoULd8LDGsQ3Y1J-913LTceBhr-cf3MkeuuxPv4e9cQRy5Gh4ic9-HeoRg1vAly4lK9JGwEAzSPrmFzmqdWF~YPMQ__);
+            background-size: cover;
+          "
+        >
+          <span style="position: relative; z-index: 2"
+            >AMARBAYASGALAN MONASTERY</span
+          >
+        </div>
+        <!-- huvsgul lake -->
+        <div
+          class="cards"
+          style="
+            background-image: url(https://s3-alpha-sig.figma.com/img/a4d6/0416/d42b9ac033e9ea4869926a93ad64d227?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bs7x5IxEDskmrNgwHwpqJxtJ8JjcjlWlA6i~nGjgDk4gSziLZ-yNeHh8bC6BpHmHQHsrcOxrAarKv3L3vBBYQBFsqlQ1lXLERSUrbg24AofEHJfaNBKzlGGOLXwzFxCP4RBpETg4o4RRq-U~Nbo2fCXTnTtjNKRHl49pBClvnHYhv-h7fOdNsc9o6k5NbyFDucPHHrv2ifG6szdzpIwerzoNRbNrtxVKxsoRnIQO6pM24FaaRXJNJxXlsZKz2u-UV7k9cMOGr90HKCvWADtYf43LXzLMXsTgipXuuielX0dhBjRJl82FzMw20yz3Sm2m7tj~meRz18pHC9EXf8apzA__);
+            background-size: cover;
+          "
+        >
+          <span>KHUVSGUL LAKE</span>
+        </div>
+        <!-- KHORGIIN TOGOO -->
+        <div
+          class="cards"
+          style="
+            background-image: url(https://s3-alpha-sig.figma.com/img/d2b9/7a2b/78cccaa3f6ec592813187ea25729681e?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JfaeCg5oyUtY3ibc1rv4r~3xRlnPAsluETBXBEbjg9U8iuGTg1mJBHCKzfdDl1itk3uHIspo3I-qvveinidi0CZXcZNhP9CRhlg~VO5XZr5V4NFa10H-x~LRm7mH8q~3HwlU3c7Ap3BnsFCKVbT-FEOCHpUt0KaiCB1nLVQ9qGwutUD6JgPgMTG2aZetrlveH-upr5R6SgAq7HD94ppLZw4a2N~hOdsuNw1G6cTIg1~bjqT09JWWNQVpHrZtc69HFIQ-BsMshO3wuhb6GX6aGCfhYAwYYHUdIgBj2zYKqA8F7zTbObesI7kp4HsTt4uvhuc8BAI-txKVeUPBle-MMg__);
+            background-size: cover;
+          "
+        >
+          <span>KHORGIIN TOGOO</span>
+        </div>
+      </article>
+    </section>
+    <!-- ========================================================================== -->
+    <!-- roadmap container -->
+    <section class="roadmap">
+      <div class="blurroad"></div>
+      <div class="framezuunduruv">
+        <span class="destination"> Destination of Our Agency </span>
+        <span class="pack">Pack your bags and get ready</span>
+      </div>
+      <div class="framenezuundalangurav" style="display: flex">
+        <div class="leftc">
+          <!-- *****     ****       *** -->
+          <div class="days" style="background-color: #eee9d9">
+            <img
+              id="duguineg"
+              src="https://s3-alpha-sig.figma.com/img/7d8a/5e71/16010885e9b9cf404e7b21d9eda6fd49?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=aGQRyoKhGNWUmMDOoT1XfWrycVw0eOMxzs6shV72eaYUGQjOYGGYgqzOlol2idKesgs-HMhnFxQP4QWOEIt7yXLuNXqNkD8KL3mEuS5mAwox1xVWvVkB5Ni46jrge2cqUTfZGtbxnP6omnNSmVrSw8q8yuT9igpbhf9Z8nBw9pIHOuF9yBDOwjdHnAG8hF6g9X5B-YqQWflozU5r5-j5O7jSIv1iaqZ8rziFkwYp-Kjnka6-a83U28umMjg8xpgH4q8aP33NaTuY1Bqd-C9RU21vvBy7RPs~fMDvQRYYoR9CBghVS~1Lpt3wrGUmdn~knC6WatEQlgDMPr5vbYWovQ__"
+              alt="dugui zurag "
+            />
+            <div class="minicontainer">
+              <!-- end hayaad yvsan -->
+              <div class="location_info">
+                <span class="location_name"> Sukhbaatar square </span>
+                <div class="location_detail">
+                  <span class="icon_container">
+                    <img
+                      style="height: 14px; width: 14px"
+                      src="https://s3-alpha-sig.figma.com/img/2b3c/3cca/10eb305e9f9d16a5f0da676c47239ec4?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FJg2VNH7v-nIvItJYfQGoxhzdoWQ4XJ4F9c4EnA~gJoqGkObFvU4UD8X2Qube2dwaADP82cEjvDv8JSCI7IN2ktidoZyZ6weFqv-segie4wTguxGrnnUE2jojYljbAtAKPCNT1pW-LFpxDqZilYnQT9p-BeF0~af8QRsXvaevZokHo8~6uSxNcUI5noBtgR7pPr3RL9uWSE7rFp7k42WDp7d2~HyO4h8FV--sJNlqcrnvurfGs67Rf05CAvwbFNaX4FE3FRkKX8yvBB5~rnBRHRyKpMJiwtHVgmUryJl-PLSTPa9MmsOiB1urW~nH~rEEWsnMfkSVQUQPpX4RHK0XQ__"
+                      alt=""
+                  /></span>
+                  <span class="location_region">Ulanbator</span>
+                </div>
+              </div>
+              <div class="day_container">
+                <span class="day_huree">
+                  <!-- udruu golluul -->
+                  <span class="day_text">DAY 1</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- ================================= -->
+          <div class="days" style="background-color: rgba(139, 184, 193, 0.8)">
+            <img
+              id="duguihoyr"
+              src="https://s3-alpha-sig.figma.com/img/8f09/fa0d/d136f7ce9c71c9e1f9031385625fbe25?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HkLTa9sn0Uj8Ws4DAzzP2zLbpzJ7qTPZTQxN6YzvN-uGonXfzPDHIdQ35-avroFfwHYctsY00aiEh4qITHCsfo0MItyC8MM1GusElD2cnX~n8Rb1i-b1H~tzqBQoJEUTpetUXVFiAqIAki0hBWD8D1Uz4t64P7EUTYVmjr5WqFF4F93o~Fg3g1DaV6lw0smI4I2ihlVzmr41DPNYTomcSccKVLTn4xnZXMTBqV4vCYNjs-uyw04lrUNZUfCdRUl~HHDJCKx8bb5EroyFbB4oDp9ylCIhOxosey51PISN4-ECRWjD2jaN-0mvObksvsFVUSAT1j6yLND5C4hqdVti~A__"
+              alt="dugui zurag "
+            />
+            <div class="minicontainer">
+              <div class="location_info">
+                <span class="location_name"> Amarbaysgalant monastery </span>
+                <div class="location_detail">
+                  <span class="icon_container">
+                    <img
+                      style="height: 14px; width: 14px"
+                      src="https://s3-alpha-sig.figma.com/img/2b3c/3cca/10eb305e9f9d16a5f0da676c47239ec4?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FJg2VNH7v-nIvItJYfQGoxhzdoWQ4XJ4F9c4EnA~gJoqGkObFvU4UD8X2Qube2dwaADP82cEjvDv8JSCI7IN2ktidoZyZ6weFqv-segie4wTguxGrnnUE2jojYljbAtAKPCNT1pW-LFpxDqZilYnQT9p-BeF0~af8QRsXvaevZokHo8~6uSxNcUI5noBtgR7pPr3RL9uWSE7rFp7k42WDp7d2~HyO4h8FV--sJNlqcrnvurfGs67Rf05CAvwbFNaX4FE3FRkKX8yvBB5~rnBRHRyKpMJiwtHVgmUryJl-PLSTPa9MmsOiB1urW~nH~rEEWsnMfkSVQUQPpX4RHK0XQ__"
+                      alt=""
+                  /></span>
+                  <span class="location_region">Bulgan</span>
+                </div>
+              </div>
+              <div class="day_container">
+                <span class="day_huree">
+                  <!-- udruu golluul -->
+                  <span class="day_text">DAY 2</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- ================================= -->
+          <div class="days" style="background-color: rgba(170, 216, 215, 0.8)">
+            <img
+              id="duguigurav"
+              src="https://s3-alpha-sig.figma.com/img/8820/a5c8/8b32e176586e22e170a49302cd4312c1?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CtqzwKLLVpj1ADKRrosoRAWMJWt-um3~EfgLwG9~GrO2P2IPt4GPnLZMCRSS9BDRqFCN-ST1wj2Mhj1SFrEWc1dMKs1AFxkv8yfSlZOo2P56QGfAnZY~5yqgno0AsMWU97nZucliD5xbFqSWlGUFX0u4YPgIaqeXC2ktMXhPW8OWuUfjCfGRolr9y9aVR8s00DwFzRtjY9Mde6E5ZbflJ~eVSTL-J~~~LqgQ2-9u0K~HgoCKw6IrRBIH0A1B8wtl-h2uNY6m2~h~EDXDk0y6bbWe0UuFnGHVB6aLhY9AhIqF4Io1PsfIWkLtov7I8nptxtsl3Sm79ZYF5ac69moXKg__"
+              alt="dugui zurag "
+            />
+            <div class="minicontainer">
+              <div class="location_info">
+                <span class="location_name"> Khorgiin togoo </span>
+                <div class="location_detail">
+                  <span class="icon_container">
+                    <img
+                      style="height: 14px; width: 14px"
+                      src="https://s3-alpha-sig.figma.com/img/2b3c/3cca/10eb305e9f9d16a5f0da676c47239ec4?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FJg2VNH7v-nIvItJYfQGoxhzdoWQ4XJ4F9c4EnA~gJoqGkObFvU4UD8X2Qube2dwaADP82cEjvDv8JSCI7IN2ktidoZyZ6weFqv-segie4wTguxGrnnUE2jojYljbAtAKPCNT1pW-LFpxDqZilYnQT9p-BeF0~af8QRsXvaevZokHo8~6uSxNcUI5noBtgR7pPr3RL9uWSE7rFp7k42WDp7d2~HyO4h8FV--sJNlqcrnvurfGs67Rf05CAvwbFNaX4FE3FRkKX8yvBB5~rnBRHRyKpMJiwtHVgmUryJl-PLSTPa9MmsOiB1urW~nH~rEEWsnMfkSVQUQPpX4RHK0XQ__"
+                      alt=""
+                  /></span>
+                  <span class="location_region">Arkhangai</span>
+                </div>
+              </div>
+              <div class="day_container">
+                <span class="day_huree">
+                  <!-- udruu golluul -->
+                  <span class="day_text">DAY 3</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- ================================= -->
+          <div class="days" style="background-color: rgba(139, 192, 189, 0.8)">
+            <img
+              id="duguiduruv"
+              src="https://s3-alpha-sig.figma.com/img/b635/3498/5a1bc5ae5c2f51cc2bb4ca30b089e3a8?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ibCGIUhj-jzKUaKbpGg97dAtA2YgLLV~syxIjk098ZOva6N~u0~b178VYplB2xRu~7zGMN4b~nhCNHtiLcDNyizZh3Z49OVud8vHBllZCNJNcgh7k4KxwHb6FuPOrbfZhPl7asc3pjW0xM-NIWeZW~bU2BMHmV5bIHbkY7asOZcLxjpxrJnrKNgX6UgqIQxSbTRjovf9jkX54yetnJ-Uyu8eIax~Fybdd-VV1foBsdfI51yaMUCixi~LwpqKiSzlFNMGVWeBIpDElcwEeHoEwBakRiHYm-fVYre1Tk12Odc3v-ugrEJSO01lwkBN0bvQhV6A4GdSZn2r~eYlzVE-aw__"
+              alt="dugui zurag "
+            />
+            <div class="minicontainer">
+              <div class="location_info">
+                <span class="location_name"> Terkhiin tsagaan lake </span>
+                <div class="location_detail">
+                  <span class="icon_container">
+                    <img
+                      style="height: 14px; width: 14px"
+                      src="https://s3-alpha-sig.figma.com/img/2b3c/3cca/10eb305e9f9d16a5f0da676c47239ec4?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FJg2VNH7v-nIvItJYfQGoxhzdoWQ4XJ4F9c4EnA~gJoqGkObFvU4UD8X2Qube2dwaADP82cEjvDv8JSCI7IN2ktidoZyZ6weFqv-segie4wTguxGrnnUE2jojYljbAtAKPCNT1pW-LFpxDqZilYnQT9p-BeF0~af8QRsXvaevZokHo8~6uSxNcUI5noBtgR7pPr3RL9uWSE7rFp7k42WDp7d2~HyO4h8FV--sJNlqcrnvurfGs67Rf05CAvwbFNaX4FE3FRkKX8yvBB5~rnBRHRyKpMJiwtHVgmUryJl-PLSTPa9MmsOiB1urW~nH~rEEWsnMfkSVQUQPpX4RHK0XQ__"
+                      alt=""
+                  /></span>
+                  <span class="location_region">Arkhangai</span>
+                </div>
+              </div>
+              <div class="day_container">
+                <span class="day_huree">
+                  <!-- udruu golluul -->
+                  <span class="day_text">DAY 4</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- ================================= -->
+          <div class="days" style="background-color: rgba(151, 204, 224, 0.8)">
+            <img
+              id="duguitav"
+              src="https://s3-alpha-sig.figma.com/img/abf7/b908/4f304b70834bf8724703cf382d2f4529?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CZmPPHhh~AoarSMsdcDGImOnI~oMe5ynUDz3QFCsIVET0svqrHThpi-690~-BOZUWKp-k0wBJtKXlA8SF0tF2VpAmG27XNpBGqXeDnPfYaOx7-dFlAOI6M5bFnw0fwK5tDEVQYy7lCrETDiROK0sgFk4ElthuUGRT~H96JWHpnX7Ntol2E2joPDh-K0neIWrQmpCJyu6D8hNPrbaDD4Hqs4y5ltde3vS~0XR7~~gT0tUoCtk0u8cYItex-7XTbKM4f5jJO0qM8gsQjrDcIaxmCK5PJWVTyNfF1mVV0AvA9P~SRIRzqfRRSPVVlfVTqBszAKCShD7~tsTLEM6VgT6zg__"
+              alt="dugui zurag "
+            />
+            <div class="minicontainer">
+              <div class="location_info">
+                <span class="location_name"> Khuvsgul lake </span>
+                <div class="location_detail">
+                  <span class="icon_container">
+                    <img
+                      style="height: 14px; width: 14px"
+                      src="https://s3-alpha-sig.figma.com/img/2b3c/3cca/10eb305e9f9d16a5f0da676c47239ec4?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FJg2VNH7v-nIvItJYfQGoxhzdoWQ4XJ4F9c4EnA~gJoqGkObFvU4UD8X2Qube2dwaADP82cEjvDv8JSCI7IN2ktidoZyZ6weFqv-segie4wTguxGrnnUE2jojYljbAtAKPCNT1pW-LFpxDqZilYnQT9p-BeF0~af8QRsXvaevZokHo8~6uSxNcUI5noBtgR7pPr3RL9uWSE7rFp7k42WDp7d2~HyO4h8FV--sJNlqcrnvurfGs67Rf05CAvwbFNaX4FE3FRkKX8yvBB5~rnBRHRyKpMJiwtHVgmUryJl-PLSTPa9MmsOiB1urW~nH~rEEWsnMfkSVQUQPpX4RHK0XQ__"
+                      alt=""
+                  /></span>
+                  <span class="location_region">Khuvsgul</span>
+                </div>
+              </div>
+              <div class="day_container">
+                <span class="day_huree">
+                  <!-- udruu golluul -->
+                  <span class="day_text">DAY 5</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rightc">
+          <span class="mappin"
+            ><img
+              class="pinstyle"
+              style="left: 84.7%; top: 20.2%"
+              src="https://s3-alpha-sig.figma.com/img/b2fb/f3d8/4244bb644419381d0c8f2b7744bb49ed?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ez2rrqDIutQ5r1Xf3KxcmucD0e1O9VAdwx09q-NRny15auZt~q7aEsC7wB-fVDgTb8LhbV4Ja4icbXu9ys5Mksx-zkTCpuiOd0we9CmWIsxGC93O3KcdRVBPT6FlhwUz6yScuKE~D8Bc66bexMqMyLOL3bJ4IedDGuH1RhWwRVeEhOwf5vazJS9-wIG9o4bJpCCMESpfRmAzF0taXx0kL0OF7BVspp9UXgBjwSShDFe5x0i-p1utnFcXygStuJlXPabBBJwHBMJpeyzXZLgs6bl9WZp9Q1mzDgXXQk9XiSZjpYgFN-z9sYUwSkrlZPXF1kFRyD8rc~2KOIoecqx4RA__"
+              alt="mappin error"
+            />
+
+            <!-- <img
+              id="duguineg"
+              src="https://s3-alpha-sig.figma.com/img/7d8a/5e71/16010885e9b9cf404e7b21d9eda6fd49?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=aGQRyoKhGNWUmMDOoT1XfWrycVw0eOMxzs6shV72eaYUGQjOYGGYgqzOlol2idKesgs-HMhnFxQP4QWOEIt7yXLuNXqNkD8KL3mEuS5mAwox1xVWvVkB5Ni46jrge2cqUTfZGtbxnP6omnNSmVrSw8q8yuT9igpbhf9Z8nBw9pIHOuF9yBDOwjdHnAG8hF6g9X5B-YqQWflozU5r5-j5O7jSIv1iaqZ8rziFkwYp-Kjnka6-a83U28umMjg8xpgH4q8aP33NaTuY1Bqd-C9RU21vvBy7RPs~fMDvQRYYoR9CBghVS~1Lpt3wrGUmdn~knC6WatEQlgDMPr5vbYWovQ__"
+              alt="dugui zurag "
+            /> -->
+          </span>
+          <span
+            class="mappin"
+            style="
+              background-color: #6972b5;
+              width: 34px;
+              height: 34px;
+              flex-shrink: 0;
+            "
+          ></span>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================================================== -->
+    <!-- price&footer -->
+    <footer class="footer_style">
+      <div class="title_container">
+        <span class="Pricing_of_Our_Agency"> Pricing of Our Agency </span>
+        <span class="choose">Choose A Package That's Right For You</span>
+      </div>
+      <!-- card_container div -->
+      <div class="card_container">
+        <!-- budget package main div -->
+        <div class="package_card">
+          <!-- header div -->
+          <header class="package_card_header">
+            <!-- iconii huree -->
+            <span
+              style="
+                display: inline-block;
+                height: 36px;
+                width: 36px;
+                border-radius: 50px;
+                border-color: #d6d8db;
+                border-style: solid;
+              "
+            >
+              <img
+                src="favorite.svg"
+                alt="fav error"
+                style="height: 20px; width: 20px; padding: 8px"
+              />
+            </span>
+
+            <span class="package_card_header_text">Budget Package</span>
+          </header>
+          <!-- content div -->
+          <div class="package_card_content">
+            <!-- detail div -->
+            <div class="package_card_content_detail">
+              <!-- price section div -->
+              <div class="package_card_content_detail_price_section">
+                <span class="package_card_content_detail_price_section_price">
+                  500$
+                </span>
+                <span
+                  class="package_card_content_detail_price_section_subtitle"
+                >
+                  Essential Covered
+                </span>
+              </div>
+              <!-- container div -->
+              <div class="package_card_content_detail_container">
+                <!-- header container div -->
+                <div
+                  class="package_card_content_detail_container_headercontainer"
+                >
+                  <span
+                    class="package_card_content_detail_container_headercontainer_text"
+                    >Includes:</span
+                  >
+                </div>
+                <!-- item container1 div -->
+                <div class="item_container">
+                  <img class="check" src="check.svg" alt="check error" />
+                  <span class="item_container_text"
+                    >Group transportation (shared van/bus)</span
+                  >
+                </div>
+                <!-- item container2 div -->
+                <div class="item_container">
+                  <img class="check" src="check.svg" alt="check error" />
+                  <span class="item_container_text"
+                    >Standard accommodation (yurt or guesthouse)</span
+                  >
+                </div>
+                <!-- item container3 div -->
+                <div class="item_container">
+                  <img class="check" src="check.svg" alt="check error" />
+                  <span class="item_container_text">Guided lake tour</span>
+                </div>
+                <!-- item container4 div -->
+                <div class="item_container">
+                  <img class="check" src="check.svg" alt="check error" />
+                  <span class="item_container_text"
+                    >1 meal per day (breakfast)</span
+                  >
+                </div>
+              </div>
+            </div>
+            <button class="package_card_content_button">Select Package</button>
+          </div>
+        </div>
+        <!-- standard package main div -->
+        <div class="package_card">
+          <!-- header div -->
+          <header class="package_card_header">
+            <!-- iconii huree -->
+            <span
+              style="
+                display: inline-block;
+                height: 36px;
+                width: 36px;
+                border-radius: 50px;
+                border-color: #d6d8db;
+                border-style: solid;
+              "
+            >
+              <img
+                src="favorite.svg"
+                alt="fav error"
+                style="height: 20px; width: 20px; padding: 8px"
+              />
+            </span>
+
+            <span class="package_card_header_text">Standard Package</span>
+          </header>
+          <!-- content div -->
+          <div class="package_card_content">
+            <!-- detail div -->
+            <div class="package_card_content_detail">
+              <!-- price section div -->
+              <div class="package_card_content_detail_price_section">
+                <span class="package_card_content_detail_price_section_price">
+                  800$
+                </span>
+                <span
+                  class="package_card_content_detail_price_section_subtitle"
+                >
+                  Balanced adventure
+                </span>
+              </div>
+              <!-- container div -->
+              <div class="package_card_content_detail_container">
+                <!-- header container div -->
+                <div
+                  class="package_card_content_detail_container_headercontainer"
+                >
+                  <span
+                    class="package_card_content_detail_container_headercontainer_text"
+                    >Includes:</span
+                  >
+                </div>
+                <!-- item container1 div -->
+                <div class="item_container">
+                  <img class="check" src="check.svg" alt="check error" />
+                  <span class="item_container_text"
+                    >Comfortable transportation (mini-bus)</span
+                  >
+                </div>
+                <!-- item container2 div -->
+                <div class="item_container">
+                  <img class="check" src="check.svg" alt="check error" />
+                  <span class="item_container_text"
+                    >Mid-range accommodation (private yurt or lodge)</span
+                  >
+                </div>
+                <!-- item container3 div -->
+                <div class="item_container">
+                  <img class="check" src="check.svg" alt="check error" />
+                  <span class="item_container_text"
+                    >Guided lake tour + nearby hiking</span
+                  >
+                </div>
+                <!-- item container4 div -->
+                <div class="item_container">
+                  <img class="check" src="check.svg" alt="check error" />
+                  <span class="item_container_text"
+                    >2 meals per day (breakfast and dinner)</span
+                  >
+                </div>
+              </div>
+            </div>
+            <button class="package_card_content_button">Select Package</button>
+          </div>
+        </div>
+        <!-- luxury package main div -->
+        <div class="package_card">
+          <!-- header div -->
+          <header class="package_card_header">
+            <!-- iconii huree -->
+            <span
+              style="
+                display: inline-block;
+                height: 36px;
+                width: 36px;
+                border-radius: 50px;
+                border-color: #d6d8db;
+                border-style: solid;
+              "
+            >
+              <img
+                src="favorite.svg"
+                alt="fav error"
+                style="height: 20px; width: 20px; padding: 8px"
+              />
+            </span>
+
+            <span class="package_card_header_text">Luxury Package</span>
+          </header>
+          <!-- content div -->
+          <div class="package_card_content">
+            <!-- detail div -->
+            <div class="package_card_content_detail">
+              <!-- price section div -->
+              <div class="package_card_content_detail_price_section">
+                <span class="package_card_content_detail_price_section_price">
+                  1200$
+                </span>
+                <span
+                  class="package_card_content_detail_price_section_subtitle"
+                >
+                  Ultimate Comfort
+                </span>
+              </div>
+              <!-- container div -->
+              <div class="package_card_content_detail_container">
+                <!-- header container div -->
+                <div
+                  class="package_card_content_detail_container_headercontainer"
+                >
+                  <span
+                    class="package_card_content_detail_container_headercontainer_text"
+                    >Includes:</span
+                  >
+                </div>
+                <!-- item container1 div -->
+                <div class="item_container">
+                  <img class="check" src="check.svg" alt="check error" />
+                  <span class="item_container_text"
+                    >Private transportation (SUV)</span
+                  >
+                </div>
+                <!-- item container2 div -->
+                <div class="item_container">
+                  <img class="check" src="check.svg" alt="check error" />
+                  <span class="item_container_text"
+                    >Luxury accommodation (lakefront lodge)</span
+                  >
+                </div>
+                <!-- item container3 div -->
+                <div class="item_container">
+                  <img class="check" src="check.svg" alt="check error" />
+                  <span class="item_container_text"
+                    >Guided tours (lake + reindeer herder experience)</span
+                  >
+                </div>
+                <!-- item container4 div -->
+                <div class="item_container">
+                  <img class="check" src="check.svg" alt="check error" />
+                  <span class="item_container_text"
+                    >All meals included (local cuisine)</span
+                  >
+                </div>
+              </div>
+            </div>
+            <button class="package_card_content_button">Select Package</button>
+          </div>
+        </div>
+      </div>
+      <!-- footer section  -->
+      <div class="foot">
+        <header class="footheader">
+          <div class="socialmedia">
+            <div class="fb">
+              <img
+                style="width: 24px; height: 24px"
+                src="fb.png"
+                alt="fb"
+              />Facebook
+            </div>
+            <div class="fb">
+              <img style="width: 24px; height: 24px" src="ig.png" alt="ig" />
+              Instagram
+            </div>
+          </div>
+          <img
+            style="width: 101px; height: 35px; flex-shrink: 0"
+            src="https://s3-alpha-sig.figma.com/img/86c0/cdfe/0a75f7a2c1c595781b7f4589e61e3895?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=agYkeJon28oU0QZ94eU2kheOeYK-4JQEUZwkzKQG6~aeDYblrd6Vv7uu4jJw92x17aThbysNFlbwhLxaHB51OE~t1TXkJ8G9V790bVOwyLJaq3nS8wN-AHPRef~U85JhH1QBp~kj8kGLNyqnIRIL8rSnBFSIBucZroPclvYIBtfMH-nt2tl~EQbHyQJhvd5RMWyCA1SaG86X7luu7G9lKtwsoiKJkvMuRagq9G9qEvBUEzDYLjr-u-rdQ5IEjbvvgrovZ0j68vV-PITbyD6tpdBsuuvG~qRkyKohDR189B0OsIKrjCBOBS4n1dg7Wq9wi1CPrJtRnQhBnH8AH1Vl2Q__"
+            alt="logo error"
+          />
+        </header>
+      </div>
+    </footer>
+  </body>
+</html>
